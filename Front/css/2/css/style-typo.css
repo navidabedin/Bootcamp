@@ -1,0 +1,192 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap);
+
+
+
+body{   
+    padding: 10%;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+    justify-content: center;
+    background-image: radial-gradient(whitesmoke, #475569);
+
+}
+
+/* input, button{
+    font: inherit;
+    padding: 10px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    margin: 10px;
+} */
+
+
+.intro{
+    text-decoration: line-through;
+    text-align: justify;
+    text-justify: inter-word;
+    text-indent: 2em;
+    line-height: 1.5;
+    word-spacing: 0.5em;
+
+    span{
+        letter-spacing: 10px;
+        font-weight: bold;
+        font-family: 'Courier New', Courier;
+    }
+}
+
+
+
+.link-heading{
+    
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: rgb(255, 196, 0);
+    width: fit-content;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+
+}
+
+
+.link-intro{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-family: 'Courier New', Courier;
+    font-weight: bold;
+}
+
+
+
+
+a{
+    cursor: pointer; /* not-allowed; */
+    color: blue;
+}
+
+a:visited{
+    color: purple;
+}
+
+a:hover, a:focus{
+    color: rgb(255, 196, 0);
+    opacity: 0.8;
+    background-color : brown;
+}
+
+a:active{
+
+color: red;
+
+}
+
+
+
+
+.cafe , .football{
+    padding: 5% 10%;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+ol{
+    list-style-type: lower-alpha;
+    padding:0 5%;
+}
+
+ul{
+    list-style-type: square;
+    text-align: center;
+    list-style-position: inside;
+    line-height: 1.5;
+    /* list-style */
+}
+
+
+ul ::marker{
+   color: red; 
+   content: "Only 1$ >>>";
+}
+
+
+
+
+
+
+.box {
+  display: block;
+  background-color: lightblue;
+  margin: 10px;
+  padding: 10px;
+}
+
+
+.box1 {
+  display: inline;
+  background-color: lightcoral;
+  margin: 10px;
+  padding: 10px;
+}
+
+.box2 {
+  display: inline-block;
+  width: 120px;
+  height: 60px;
+  background-color: lightgreen;
+  margin: 10px;
+  padding: 10px;
+}
+
+
+.columns {
+  column-count: 4; /* max */
+  column-width: 250px; 
+  /* columns: 4 250px; */
+  column-rule: 1px solid black;
+  column-gap: 3rem;
+}
+
+.columns p{
+    margin-top:0;
+}
+
+.columns h2{
+    font-size: 2rem;
+    margin-top:0;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    break-inside: avoid; /* تکه تکه نشود */
+    white-space: inherit; /* خط بعدی نرود */
+}
+
+
+img{
+    display: block;
+    width: 25%;
+    height: auto;
+}
+
+.example{
+    margin-top: 1rem;
+    padding: 20px;
+    border: 1px solid rgb(255, 0, 0);
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 768px) and (orientation: landscape)   and (min-aspect-ratio: 4/3) and (max-aspect-ratio: 16/9) {
+    body{
+        padding: 5%;
+    }
+    
+}

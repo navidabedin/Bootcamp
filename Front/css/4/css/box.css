@@ -1,0 +1,235 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+/* استیکی */
+.sticky-header {
+  position: sticky;
+  margin-top: 30px;
+  top: 0;
+  background: #333;
+  color: white;
+  padding: 30px;
+  font-size: 20px;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+/* باکس ثابت کنار صفحه */
+.fixed-box {
+  position: fixed;
+  top: 300px;
+  right: 20px;
+  background: crimson;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  width: 120px;
+  text-align: center;
+}
+
+/* بخش محتوا */
+.content-section {
+  padding: 30px;
+}
+
+/* والد Relative */
+.relative-box {
+  position: relative;
+  background: lightblue;
+  padding: 40px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+
+/* فرزند absolute */
+.absolute-child {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background: navy;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+/* فوتر */
+.page-footer {
+  background: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+
+.container {
+  min-width: 100px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: row; /* column-reverse */
+  flex-wrap: wrap; /* nowrap | wrap-reverse */
+  margin-inline: auto;
+  border: 1px solid black;
+  justify-content: space-around;
+  padding: 0.5rem;
+  margin: 20px;
+  flex-flow: row wrap; /* flex-direction | flex-wrap */
+}
+
+.box1, .box2, .box3, .box4 {
+  min-width: 100px;
+  min-height: 100px;
+  margin: 10px;
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.box2:nth-child(2) {
+  flex-grow: 2;
+  background-color: lightcoral;
+}
+
+.box3:nth-child(3) {
+  flex-shrink: 2;
+  background-color: rgb(159, 0, 0);
+}
+
+.box4:nth-child(4) {
+  flex-basis: 200px;
+  background-color: rgb(0, 159, 0);
+}
+
+
+.container2 {
+  display: grid;
+  font-family: Roboto;
+  min-height: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr 2fr);
+  grid-auto-flow: minmax(100px, auto);
+  gap: 2em;
+}
+
+.box{ 
+  color: lightblue;
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
+}
+
+.box:first-child {
+  background-color: blue;
+  grid-column: 1 / 4;
+  grid-row: 1 / 3;
+  display: grid;
+  place-content: center end; /* align */ /* justify */;
+}
+
+.box:nth-child(2) {
+  background-color: red;
+  grid-column: 1 / 5;
+  grid-row: 3 / 4;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.grid-showcase {
+  padding: 20px;
+  background-color: #f4f4f9;
+}
+
+.grid-header {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container3 {
+  display: grid;
+  /* ایجاد ۳ ستون با عرض‌های کاملاً متفاوت */
+  grid-template-columns: 250px 1fr minmax(150px, 2fr);
+  /* ایجاد ردیف‌های نامتقارن */
+  grid-template-rows: 200px 150px 100px;
+  gap: 1.5rem 3rem; /* فاصله عمودی و افقی متفاوت */
+  min-height: 500px;
+}
+
+.box {
+  color: white;
+  background-color: #2d3436;
+  padding: 15px;
+  border: 2px solid #636e72;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  display: flex; /* برای کنترل محتوای داخلی هر باکس */
+}
+
+/* باکس ۱: وسط‌چین کامل (تکنیک Flex) */
+.box.b1 {
+  background-color: #0984e3;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  justify-content: center;
+  align-items: center;
+}
+
+/* باکس ۲: چسبیده به بالا و چپ */
+.box.b2 {
+  background-color: #d63031;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* باکس ۳: چسبیده به پایین و راست */
+.box.b3 {
+  background-color: #6c5ce7;
+  grid-column: 3;
+  grid-row: 1 / 3;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+/* باکس ۴: کشیده شده در کل عرض در دسترس */
+.box.b4 {
+  background-color: #00b894;
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+  /* به صورت پیش‌فرض stretch است */
+}
+
+/* باکس ۵: وسط افقی، پایین عمودی */
+.box.b5 {
+  background-color: #fdcb6e;
+  color: #2d3436;
+  grid-column: 2 / 3;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* باکس ۶: تراز شده به راست */
+.box.b6 {
+  background-color: #e84393;
+  grid-column: 3;
+  justify-content: flex-end;
+  align-items: center;
+}
