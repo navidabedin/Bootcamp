@@ -1,18 +1,3 @@
-/* ==========================================
-   1. متغیرها و تنظیمات پایه (CSS Variables)
-   ========================================== */
-:root {
-  --primary-color: #6C5CE7;      /* بنفش اصلی طراحی */
-  --primary-hover: #5A4AD1;      /* بنفش تیره‌تر برای Hover */
-  --primary-light: #EEECFB;      /* بنفش خیلی روشن برای پس‌زمینه دکمه اوت‌لاین */
-  --text-dark: #2D3436;          /* رنگ متن اصلی */
-  --text-muted: #636E72;         /* رنگ متن توضیحات */
-  --bg-light: #cccccc;           /* رنگ پس‌زمینه صفحه */
-  --white: #FFFFFF;
-  --transition-fast: all 0.25s ease-in-out;
-  --focus-ring: 0 0 0 3px rgba(108, 92, 231, 0.4);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -21,15 +6,14 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: var(--bg-light);
-  color: var(--text-dark);
+  background-color:#cccccce8;
+  color:#2D3436;
   line-height: 1.6;
-  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: #2D3436;
 }
 
 ul {
@@ -39,15 +23,13 @@ ul {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 32px;
 }
 
-/* ==========================================
-   2. هدر و منوی ناوبری (Header & Nav)
-   ========================================== */
+
 .header {
-  padding: 1.8rem 0;
-  background-color: transparent;
+  padding: 30px 0;
+  background-color: transparent; 
 }
 
 .header-container {
@@ -57,45 +39,54 @@ ul {
 }
 
 .logo {
-  font-size: 1.8rem;
+  font-size: 30px;
   font-weight: 800;
-  color: var(--text-dark);
+  color:#2D3436;
   letter-spacing: -0.5px;
 }
 
 .logo span {
-  color: var(--primary-color);
+  color:#6C5CE7;
 }
 
 .nav-list {
   display: flex;
-  gap: 2.2rem;
+  gap: 35px;
 }
 
 .nav-link {
-  font-size: 0.96rem;
+  font-size: 16px;
   font-weight: 500;
-  color: var(--text-muted);
+  color:#636E72;
   position: relative;
-  padding: 0.3rem 0;
-  transition: var(--transition-fast);
+  padding: 5px 0;
+  transition: all 0.25s ease-in-out;
 }
 
-/* Hover & Focus برای لینک‌های منو */
+
 .nav-link:hover,
 .nav-link.active {
-  color: var(--text-dark);
+  color:#2D3436;
 }
+
+
+
+/* بعد هر لینک یه پیشفرض المان صفر میسازیم
+ */
 
 .nav-link::after {
   content: '';
-  position: absolute;
+  position: absolute; 
+/*   چون navlink relative بود اینجا طبق تدریس میشد absolute رو کرد
+ */ 
   bottom: 0;
   left: 0;
   width: 0%;
   height: 2px;
-  background-color: var(--primary-color);
-  transition: var(--transition-fast);
+  background-color:#6C5CE7;
+/* تغییر نرم داسته باشم
+ */  
+  transition: all 0.25s ease-in-out;
   border-radius: 2px;
 }
 
@@ -104,54 +95,55 @@ ul {
   width: 100%;
 }
 
+/* یه سایه خیلی ریز برا لینکا
+ */
 .nav-link:focus-visible {
   outline: none;
-  box-shadow: var(--focus-ring);
+  box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.4);
   border-radius: 4px;
 }
 
-/* ==========================================
-   3. دکمه‌ها (Buttons & Interactions)
-   ========================================== */
+
+
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.8rem;
-  font-size: 0.95rem;
+  width: 180px;
+  padding: 12px 30px;
+  font-size: 16px;
   font-weight: 600;
   border-radius: 10px;
-  transition: var(--transition-fast);
+  transition: all 0.25s ease-in-out;
   cursor: pointer;
   border: 2px solid transparent;
 }
 
-/* دکمه بنفش توپر (Let's Talk, Hire Me) */
+
 .btn-primary {
-  background-color: var(--primary-color);
-  color: var(--white);
+  background-color: #6C5CE7;
+  color:#FFFFFF;
   box-shadow: 0 4px 14px rgba(108, 92, 231, 0.25);
 }
 
 .btn-primary:hover {
-  background-color: var(--primary-hover);
+  background-color:#6C5CE7;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(108, 92, 231, 0.35);
 }
 
-.btn-primary:active {
-  transform: translateY(0);
-}
 
-/* دکمه اوت‌لاین (See Projects) */
+
 .btn-outline {
   background-color: transparent;
-  color: var(--primary-color);
-  border-color: var(--primary-color);
+  color:#6C5CE7;
+  border-color:#6C5CE7;
 }
 
 .btn-outline:hover {
-  background-color: var(--primary-light);
+  background-color:#EEECFB;
+/*   موس رو نزدیک کنیم بره دو پیکسل بالا
+ */  
   transform: translateY(-2px);
 }
 
@@ -159,84 +151,93 @@ ul {
   transform: translateY(0);
 }
 
-/* Focus دسترس‌پذیر برای همه دکمه‌ها */
-.btn:focus-visible {
-  outline: none;
-  box-shadow: var(--focus-ring);
-}
 
-/* ==========================================
-   4. بخش هیرو (Hero Section)
-   ========================================== */
+
+
 .hero {
-  padding: 3rem 0 5rem;
+  padding: 50px 0 80px;
 }
 
 .hero-container {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  display: flex;
   align-items: center;
-  gap: 3rem;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
 }
 
+.hero-content {
+    flex: 1 1 520px;
+  }
+
 .hero-title {
-  font-size: 3.2rem;
+  font-size: 52px;
   font-weight: 800;
   line-height: 1.2;
-  color: var(--text-dark);
-  margin-bottom: 0.5rem;
+  color:#2D3436;
+  margin-bottom: 8px;
 }
 
 .hero-title .highlight {
-  color: var(--primary-color);
+  color:#6C5CE7;
 }
 
 .hero-subtitle {
-  font-size: 2rem;
+  font-size: 32px;
   font-weight: 700;
-  color: var(--text-dark);
-  margin-bottom: 1.2rem;
+  color:#2D3436;
+  margin-bottom: 20px;
 }
 
 .hero-description {
-  font-size: 1rem;
-  color: var(--text-muted);
+  font-size: 16px;
+  color:#636E72;
   max-width: 480px;
-  margin-bottom: 2.2rem;
+  margin-bottom: 35px;
 }
 
 .cta-group {
   display: flex;
-  gap: 1rem;
-  margin-bottom: 2.5rem;
+  gap: 20PX;
+  margin-bottom: 40px;
 }
 
-/* ==========================================
-   5. آیکون‌های شبکه اجتماعی (Social Links)
-   ========================================== */
+
+
 .social-links {
   display: flex;
-  gap: 0.9rem;
+  gap: 24px;
 }
 
 .social-icon {
-  width: 42px;
-  height: 42px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
-  background-color: var(--primary-color);
-  color: var(--white);
+  background-color: #6c5ce7;
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
-  transition: var(--transition-fast);
-  box-shadow: 0 4px 10px rgba(108, 92, 231, 0.2);
+  font-size: 19px;
+  transition: all 0.3s ease;
+  border: 2px solid #6c5ce7;
+  outline: 1.5px solid white;
+  outline-offset: -4px;
+  text-decoration: none;
+}
+
+
+.custom-icon-img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
 }
 
 .social-icon:hover {
-  background-color: var(--primary-hover);
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 6px 16px rgba(108, 92, 231, 0.35);
+/* یکم پررنگ تر
+ */
+  background-color: #5b4bc4;
+  transform: translateY(-3px);
 }
 
 .social-icon:active {
@@ -245,65 +246,51 @@ ul {
 
 .social-icon:focus-visible {
   outline: none;
-  box-shadow: var(--focus-ring);
+  box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.4);
 }
 
-/* ==========================================
-   6. نگهدارنده تصویر (Image Container)
-   ========================================== */
+
+
 .hero-image-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateY(-3rem);
-}
-
-.hero-image-placeholder {
-  width: 100%;
   max-width: 450px;
-  height: 520px;
-  border-radius: 24px;
-  background: linear-gradient(135deg, #e0dcfc 0%, #f1effe 100%);
-  border: 2px dashed rgba(108, 92, 231, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--transition-fast);
-}
-
-.hero-image-placeholder:hover {
-  border-color: var(--primary-color);
-}
-
-.placeholder-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.8rem;
-  color: var(--primary-color);
-  font-weight: 500;
-  opacity: 0.7;
-}
-
-.placeholder-text i {
-  font-size: 3rem;
-}
-
-/* در صورت اضافه کردن عکس واقعی */
-.hero-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 24px;
+  border-radius: 10px;
+  margin: 0 auto;
 }
 
-/* ==========================================
-   7. واکنش‌گرایی (Responsive Design)
-   ========================================== */
+
+.hero-img {
+  display: block;
+  width: 100%;
+  max-width: 430px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
 @media (max-width: 992px) {
   .hero-container {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     text-align: center;
+  }
+
+  .hero-content {
+    flex: unset;
+  }
+
+  .hero-image-container {
+    flex: unset;
+    max-width: 380px;
+    width: 100%;
   }
 
   .hero-description {
@@ -316,22 +303,59 @@ ul {
     justify-content: center;
   }
 
-  .hero-image-placeholder {
-    height: 400px;
-    margin: 0 auto;
-  }
+  
 }
 
+
 @media (max-width: 768px) {
-  .navbar {
-    display: none; /* جهت سادگی در رزولوشن موبایل منو مخفی می‌شود */
+
+  .logo{
+    font-size: 18px;
+  }
+
+  .btn{
+    width: 150px;
+    font-size: 12px;
+  }
+
+  .nav-link {
+    font-size: 11px;
+  }
+
+  .nav-list {
+    gap: 20px;
   }
 
   .hero-title {
-    font-size: 2.4rem;
+    font-size: 30px;
   }
 
   .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
+}
+
+
+@media (max-width: 440px) {
+
+  .logo{
+    font-size: 13px;
+  }
+
+  .btn-header{
+    font-size: 8px;
+    width: 70px;
+    padding: 12px 0;
+    
+  }
+
+  .nav-link {
+    
+    font-size: 8px;
+  }
+
+  .nav-list {
+    gap: 8px;
+  }
+
 }
