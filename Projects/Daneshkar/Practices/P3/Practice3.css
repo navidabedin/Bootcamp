@@ -26,6 +26,7 @@
 body{
     background-color: var(--background);
     font-family: Poppins;
+    overflow-x: hidden;
 }
 
 .container{
@@ -436,4 +437,402 @@ ul.unordered{
 
 .checkout-btn:hover {
     filter: brightness(0.9);
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:2200px){
+
+    .navbar{
+            width: 90vh;
+    }
+
+    .des1{
+    
+            font-size: 22px;
+            margin-left: 40px;
+    }
+    .search-bar {
+            grid-column: span 2;
+            max-width: calc(30vh + 320px);
+            margin-left: 5px;
+            max-height: 40px;
+    }
+
+    .select-category {
+        max-width: 320px;
+    }
+
+    .select-category::after {
+        right: 13px;
+        font-size: 17px;
+    }
+
+    .select-category::before {
+        margin: 5px 10px;
+        font-size: 12px;
+    }
+
+    .service-grid{
+        grid-template-columns: repeat(3, 30vh);
+        grid-template-rows: repeat(8, 15vh);
+        width: 60%;
+    }
+
+
+
+    .card {
+        max-width: 320px;
+        max-height: 180px;
+        gap: 20px;
+    }
+    
+
+
+}
+
+
+
+
+@media screen and (max-width:1300px){
+
+    .container {
+        margin: 40px 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar{
+            width: 100٪;
+    }
+
+    .des1{
+            font-size: 21px;
+            margin-left: 40px;
+    }
+
+    .search-bar {
+        height: 60px;
+    }
+
+    .service-grid{
+        width: calc(100% - 80px);
+        margin: 40px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: none;
+        transform: none;
+    }
+
+    .select-category {
+        max-width: 200px;
+    }
+
+
+
+    .card {
+        max-width: 200px;
+        height: 175px;
+        gap: 20px;
+    }
+
+    .your-order {
+         align-self: center;
+         width: calc(100% - 80px);
+         min-width: 280px;
+         max-width: 360px;
+         margin: 40px auto 0;
+    }
+
+
+    .order-card {
+        min-width: 0;
+        padding: 16px;
+    }
+
+    .order-card-description {
+        width: 100%;
+    }
+
+    .order-prices {
+        margin-left: auto;
+    }
+
+    .percentage {
+        width: 100%;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    .order-bottom-tabs {
+        flex-wrap: wrap;
+    }
+
+    .device {
+        width: calc((100% - 14px) / 3);
+    }
+
+
+    
+}
+
+
+@media screen and (max-width:1100px){
+    .container {
+        margin: 35px 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar{
+            width: 100%;
+    }
+
+    .des1{
+            font-size: 18px;
+            margin-left: 40px;
+    }
+
+
+    .service-grid{
+        width: calc(100% - 70px);
+        margin: 35px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: none;
+        transform: none;
+    }
+
+    .select-category {
+        max-width: 160px;
+    }
+
+
+    .card {
+        max-width: 160px;
+        height: 150px;
+        gap: 20px;
+    }
+
+    .your-order {
+            align-self: center;
+            width: calc(100% - 70px);
+            min-width: 280px;
+            max-width: 340px;
+            margin: 35px auto 0;
+    }
+
+
+    .order-card {
+        min-width: 0;
+        padding: 14px;
+    }
+
+    .order-card-description {
+        width: 100%;
+    }
+
+    .order-prices {
+        margin-left: auto;
+    }
+
+    .percentage {
+        width: 100%;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    .order-bottom-tabs {
+        flex-wrap: wrap;
+    }
+
+    .device {
+        width: calc((100% - 14px) / 3);
+    }
+
+
+}
+
+
+@media screen and (max-width:800px){
+
+    .container {
+        margin: 33 auto;
+    }
+
+    .navbar{
+            width: 100%;
+            margin: auto;
+    }
+
+
+
+    .service-grid{
+        grid-template-columns: repeat(3, 17vh);
+        grid-template-rows: repeat(8, 13vh);
+        align-items: center;
+    }
+
+    .search-bar {
+            grid-column: span 2;
+            max-width: calc(17vh + 180px);
+            margin-left: 5px;
+            max-height: 35px;
+    }
+
+    .select-category {
+        max-width: 180px;
+    }
+
+
+    .card {
+        max-width: 160px;
+        height: 150px;
+        gap: 20px;
+    }
+
+     .your-order {
+        align-self: center;
+        width: calc(100% - 32px);
+        min-width: 0;
+        max-width: 320px;
+        margin: 30px auto 0;
+    }
+
+    .order-card {
+        min-width: 0;
+        padding: 14px;
+    }
+
+    .order-card-description {
+        width: 100%;
+    }
+
+    .order-prices {
+        margin-left: auto;
+    }
+
+    .percentage {
+        width: 100%;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    .order-bottom-tabs {
+        flex-wrap: wrap;
+    }
+
+    .device {
+        width: calc((100% - 14px) / 3);
+    }
+
+}
+
+
+@media screen and (max-width: 450px) {
+
+    .container {
+        width: 100%;
+        margin: 20px 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    ul.unordered {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 4px;
+        transform: none;
+    }
+
+    .des1 {
+        width: auto;
+        margin-left: 0;
+        padding: 10px 6px;
+        font-size: 14px;
+    }
+
+    #pro {
+        margin-right: 0;
+    }
+
+    .service-grid {
+        width: calc(100% - 32px);
+        margin: 30px 16px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: none;
+        gap: 10px;
+        align-items: stretch;
+        transform: none;
+    }
+
+    .search-bar {
+        grid-column: 1 / -1;
+        width: 100%;
+        max-width: none;
+        margin: 8px 0;
+        height: 40px;
+        max-height: 40px;
+    }
+
+    .select-category {
+        grid-column: 1 / -1;
+        width: 95%;
+        max-width: none;
+        height: 40px;
+        margin: 8px 0;
+        max-height: 40px;
+    }
+
+    .card {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        min-height: 100px;
+        gap: 10px;
+    }
+
+    .your-order {
+        align-self: center;
+        width: calc(100% - 32px);
+        min-width: 0;
+        max-width: 320px;
+        margin: 30px auto 0;
+    }
+
+    .order-card {
+        min-width: 0;
+        padding: 14px;
+    }
+
+    .order-card-description {
+        width: 100%;
+    }
+
+    .order-prices {
+        margin-left: auto;
+    }
+
+    .percentage {
+        width: 100%;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    .order-bottom-tabs {
+        flex-wrap: wrap;
+    }
+
+    .device {
+        width: calc((100% - 14px) / 3);
+    }
 }
