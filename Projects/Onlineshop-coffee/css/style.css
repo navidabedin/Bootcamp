@@ -4,9 +4,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Harmattan:wght@400;500;600;700&family=Playpen+Sans+Arabic:wght@100..800&display=swap');
 
 
-*, *::before, *::after { box-sizing: border-box;
+*, *::before, *::after {
+
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+
 }
 
 :root {
@@ -54,8 +57,10 @@ fieldset {
 .header {
   background: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
+  margin: 0.25rem;
+  border-radius: 0.5rem;
   position: sticky;
-  top: 0;
+  top: 0.25rem;
   z-index: 100;
 }
 .header__inner {
@@ -71,6 +76,9 @@ fieldset {
   font-size: 1.3rem;
   font-weight: 700;
   color: var(--color-primary);
+}
+.header__logo img {
+  max-width: 1.3rem;
 }
 .header__nav {
   display: flex;
