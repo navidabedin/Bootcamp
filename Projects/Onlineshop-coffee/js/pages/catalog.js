@@ -17,11 +17,13 @@ function renderGrid() {
   const items = currentFilter === 'all' ? allProducts : allProducts.filter(p => p.type === currentFilter);
   grid.innerHTML = items.map(p => `
     <article class="product-card" data-id="${p.id}">
-      <div class="product-card__img">☕</div>
+      <div class="product-card__img">
+      <img src="${p.image}" alt="${p.name}">
+      </div>
       <div class="product-card__body">
         <span class="product-card__type">${p.typeLabel}</span>
         <h3 class="product-card__name">${p.name}</h3>
-        <p class="product-card__origin">📍 ${p.origin}</p>
+        <p class="product-card__origin"><img src="${p.flag} " alt="${p.name}"> ${p.origin}</p>
         <p class="product-card__desc">${p.desc}</p>
         <p class="product-card__price">${formatPrice(p.pricePerKg)} تومان / کیلو</p>
       </div>

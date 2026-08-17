@@ -1,13 +1,13 @@
 export const arabicaVariants = [
-  { id: 'eth', name: 'اتیوپی', origin: 'اتیوپی', flag: '🇪🇹', pricePerKg: 980000, desc: 'میوه‌ای، گل‌دار، اسیدیته بالا' },
-  { id: 'col', name: 'کلمبیا', origin: 'کلمبیا', flag: '🇨🇴', pricePerKg: 920000, desc: 'کارامل، آجیل، متعادل' },
-  { id: 'bra', name: 'برزیل', origin: 'برزیل', flag: '🇧🇷', pricePerKg: 840000, desc: 'شکلاتی، کره‌ای، ملایم' },
+  { id: 'eth', name: 'اتیوپی', origin: 'اتیوپی', flag: '🇪🇹', pricePerKg: 980000, desc: 'میوه‌ای، گل‌دار، اسیدیته بالا' , image: "img/ethiopia.webp", flag: "img/et.webp"},
+  { id: 'col', name: 'کلمبیا', origin: 'کلمبیا', flag: '🇨🇴', pricePerKg: 920000, desc: 'کارامل، آجیل، متعادل' , image: "img/colombia.webp", flag: "img/co.webp"},
+  { id: 'bra', name: 'برزیل', origin: 'برزیل', flag: '🇧🇷', pricePerKg: 840000, desc: 'شکلاتی، کره‌ای، ملایم' , image: "img/brazil.webp", flag: "img/br.webp"},
 ];
 
 export const robustaVariants = [
-  { id: 'viet', name: 'ویتنام', origin: 'ویتنام', flag: '🇻🇳', pricePerKg: 560000, desc: 'قوی، تلخ، کرما بالا' },
-  { id: 'ind',  name: 'هند',    origin: 'هند',    flag: '🇮🇳', pricePerKg: 520000, desc: 'خاکی، ادویه‌ای' },
-  { id: 'uga',  name: 'اوگاندا', origin: 'اوگاندا', flag: '🇺🇬', pricePerKg: 490000, desc: 'دودی، تند، غنی' },
+  { id: 'viet', name: 'ویتنام', origin: 'ویتنام', flag: '🇻🇳', pricePerKg: 560000, desc: 'قوی، تلخ، کرما بالا' , image: "img/vietnam.webp", flag: "img/vn.webp"},
+  { id: 'ind',  name: 'هند',    origin: 'هند',    flag: '🇮🇳', pricePerKg: 520000, desc: 'خاکی، ادویه‌ای' , image: "img/india.webp", flag: "img/in.webp"},
+  { id: 'uga',  name: 'اوگاندا', origin: 'اوگاندا', flag: '🇺🇬', pricePerKg: 490000, desc: 'دودی، تند، غنی' , image: "img/uganda.webp", flag: "img/ug.webp"},
 ];
 
 export const blendRatios = [
