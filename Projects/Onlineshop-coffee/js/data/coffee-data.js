@@ -1,26 +1,26 @@
 export const arabicaVariants = [
-  { id: 'eth', name: 'اتیوپی', origin: 'اتیوپی', flag: '🇪🇹', pricePerKg: 980000, desc: 'میوه‌ای، گل‌دار، اسیدیته بالا' , image: "img/ethiopia.webp", flag: "img/et.webp"},
-  { id: 'col', name: 'کلمبیا', origin: 'کلمبیا', flag: '🇨🇴', pricePerKg: 920000, desc: 'کارامل، آجیل، متعادل' , image: "img/colombia.webp", flag: "img/co.webp"},
-  { id: 'bra', name: 'برزیل', origin: 'برزیل', flag: '🇧🇷', pricePerKg: 840000, desc: 'شکلاتی، کره‌ای، ملایم' , image: "img/brazil.webp", flag: "img/br.webp"},
+  { id: 'eth', name: 'اتیوپی', origin: 'اتیوپیایی', flag: '🇪🇹', pricePerKg: 980, desc: 'میوه‌ای، گل‌دار، اسیدیته بالا' , image: "img/ethiopia.webp", flagpic: "img/et.webp"},
+  { id: 'col', name: 'کلمبیا', origin: 'کلمبیایی', flag: '🇨🇴', pricePerKg: 920, desc: 'کارامل، آجیل، متعادل' , image: "img/colombia.webp", flagpic: "img/co.webp"},
+  { id: 'bra', name: 'برزیل', origin: 'برزیلی', flag: '🇧🇷', pricePerKg: 840, desc: 'شکلاتی، کره‌ای، ملایم' , image: "img/brazil.webp", flagpic: "img/br.webp"},
 ];
 
 export const robustaVariants = [
-  { id: 'viet', name: 'ویتنام', origin: 'ویتنام', flag: '🇻🇳', pricePerKg: 560000, desc: 'قوی، تلخ، کرما بالا' , image: "img/vietnam.webp", flag: "img/vn.webp"},
-  { id: 'ind',  name: 'هند',    origin: 'هند',    flag: '🇮🇳', pricePerKg: 520000, desc: 'خاکی، ادویه‌ای' , image: "img/india.webp", flag: "img/in.webp"},
-  { id: 'uga',  name: 'اوگاندا', origin: 'اوگاندا', flag: '🇺🇬', pricePerKg: 490000, desc: 'دودی، تند، غنی' , image: "img/uganda.webp", flag: "img/ug.webp"},
+  { id: 'viet', name: 'ویتنام', origin: 'ویتنامی', flag: '🇻🇳', pricePerKg: 560, desc: 'قوی، تلخ، کرما بالا' , image: "img/vietnam.webp", flagpic: "img/vn.webp"},
+  { id: 'ind',  name: 'هند',    origin: 'هندی',    flag: '🇮🇳', pricePerKg: 520, desc: 'خاکی، ادویه‌ای' , image: "img/india.webp", flagpic: "img/in.webp"},
+  { id: 'uga',  name: 'اوگاندا', origin: 'اوگاندایی', flag: '🇺🇬', pricePerKg: 490, desc: 'دودی، تند، غنی' , image: "img/uganda.webp", flagpic: "img/ug.webp"},
 ];
 
 export const blendRatios = [
-  { label: '۱۰۰/۰',  arabicaPct: 100, robustaPct: 0   },
-  { label: '۷۰/۳۰',  arabicaPct: 70,  robustaPct: 30  },
-  { label: '۵۰/۵۰',  arabicaPct: 50,  robustaPct: 50  },
-  { label: '۳۰/۷۰',  arabicaPct: 30,  robustaPct: 70  },
-  { label: '۰/۱۰۰',  arabicaPct: 0,   robustaPct: 100 },
+  { label: '100/0',  arabicaPct: 100, robustaPct: 0   },
+  { label: '70/30',  arabicaPct: 70,  robustaPct: 30  },
+  { label: '50/50',  arabicaPct: 50,  robustaPct: 50  },
+  { label: '30/70',  arabicaPct: 30,  robustaPct: 70  },
+  { label: '0/100',  arabicaPct: 0,   robustaPct: 100 },
 ];
 
 export const weightOptions = [
-  { label: '۲۵۰ گرم', value: 0.25 },
-  { label: '۵۰۰ گرم', value: 0.5  },
-  { label: '۱ کیلو',  value: 1    },
-  { label: '۲ کیلو',  value: 2    },
+  { label: '250gr', value: 0.25 },
+  { label: '500gr', value: 0.5  },
+  { label: '1kg',  value: 1    },
+  { label: '2kg',  value: 2    },
 ];

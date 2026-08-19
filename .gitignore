@@ -1,0 +1,13 @@
+# Ignore practice files
+Projects/Daneshkar/Practices/Pr/Pr.css
+Projects/Daneshkar/Practices/Pr/Pr.html
+Projects/Daneshkar/Practices/Pr/Pr.js
+
+
+# Ignore full folders
+reactjs-html-course/
+Projects/Daneshkar/Practices/Pr/
+
+
+# Ignore editor settings
+.vscode/

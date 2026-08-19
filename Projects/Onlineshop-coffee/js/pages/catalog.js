@@ -22,10 +22,10 @@ function renderGrid() {
       </div>
       <div class="product-card__body">
         <span class="product-card__type">${p.typeLabel}</span>
-        <h3 class="product-card__name">${p.name}</h3>
-        <p class="product-card__origin"><img src="${p.flag} " alt="${p.name}"> ${p.origin}</p>
+        <h3 class="product-card__name">${p.origin}</h3>
+        <p class="product-card__origin"><img src="${p.flagpic} " alt="${p.name}"> ${p.name}</p>
         <p class="product-card__desc">${p.desc}</p>
-        <p class="product-card__price">${formatPrice(p.pricePerKg)} تومان / کیلو</p>
+        <p class="product-card__price">هر کیلوگرم${formatPrice(p.pricePerKg)} هزارتومان</p>
       </div>
       <div class="product-card__footer">
         <a href="configurator.html" class="btn btn--outline">ترکیب اختصاصی</a>
