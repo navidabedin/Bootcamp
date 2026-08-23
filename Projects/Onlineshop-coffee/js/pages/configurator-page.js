@@ -12,7 +12,7 @@ function renderVariants(containerId, variants, stateKey) {
          data-id="${v.id}" data-key="${stateKey}">
       <div class="variant-card__flag">${v.flag}</div>
       <div class="variant-card__name">${v.name}</div>
-      <div class="variant-card__price">${formatPrice(v.pricePerKg)} ت/کیلو</div>
+      <div class="variant-card__price">${formatPrice(v.pricePerKg)} T/Kg</div>
     </div>
   `).join('');
 }
@@ -39,7 +39,7 @@ function updateSummary() {
   document.getElementById('s-arabica').textContent = state.arabica ? `${state.arabica.flag} ${state.arabica.name}` : '—';
   document.getElementById('s-robusta').textContent = state.robusta ? `${state.robusta.flag} ${state.robusta.name}` : '—';
   document.getElementById('s-ratio').textContent = state.blend ? state.blend.label : '—';
-  document.getElementById('s-form').textContent = state.form === 'bean' ? 'دانه' : 'پودر';
+  document.getElementById('s-form').textContent = state.form === 'bean' ? 'Beans(دانه)' : 'Powder(پودر)';
   document.getElementById('s-weight').textContent = state.weight ? state.weight.label : '—';
   document.getElementById('s-qty').textContent = state.quantity;
 
