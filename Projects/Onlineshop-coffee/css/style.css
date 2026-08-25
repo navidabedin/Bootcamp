@@ -511,7 +511,10 @@ fieldset {
   color: var(--color-text-muted);
   margin-bottom: 1.25rem;
 }
-.summary-card__list span { color: var(--color-text); font-weight: 600; }
+.summary-card__list span {
+  color: var(--color-text); 
+  font-weight: 600;
+}
 .summary-card__price {
   font-size: 1rem;
   margin-bottom: 1.25rem;
@@ -523,7 +526,10 @@ fieldset {
   gap: .4rem;
   flex-wrap: wrap;
 }
-.summary-card__price strong { font-size: 1.3rem; color: var(--color-primary); }
+.summary-card__price strong { 
+  font-size: 1.3rem;
+  color: var(--color-primary);
+}
 
 /* ===== Cart Sidebar ===== */
 .cart-sidebar {
@@ -585,7 +591,7 @@ fieldset {
   color: #c0392b;
   font-size: .8rem;
   margin-top: .2rem;
-}
+}۳
 .cart-empty {
   text-align: center;
   color: var(--color-text-muted);

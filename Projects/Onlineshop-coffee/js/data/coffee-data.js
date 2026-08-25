@@ -1,13 +1,13 @@
 export const arabicaVariants = [
-  { id: 'eth', name: 'اتیوپی', origin: 'اتیوپیایی', flag: '🇪🇹', pricePerKg: 980, desc: 'میوه‌ای، گل‌دار، اسیدیته بالا' , image: "img/ethiopia.webp", flagpic: "img/et.webp"},
-  { id: 'col', name: 'کلمبیا', origin: 'کلمبیایی', flag: '🇨🇴', pricePerKg: 920, desc: 'کارامل، آجیل، متعادل' , image: "img/colombia.webp", flagpic: "img/co.webp"},
-  { id: 'bra', name: 'برزیل', origin: 'برزیلی', flag: '🇧🇷', pricePerKg: 840, desc: 'شکلاتی، کره‌ای، ملایم' , image: "img/brazil.webp", flagpic: "img/br.webp"},
+  { id: 'eth', name: 'اتیوپی', origin: 'اتیوپیایی', flag: '🇪🇹', pricePerKg: 1200000, desc: 'میوه‌ای، گل‌دار، اسیدیته بالا' , image: "img/ethiopia.webp", flagpic: "img/et.webp"},
+  { id: 'col', name: 'کلمبیا', origin: 'کلمبیایی', flag: '🇨🇴', pricePerKg: 1000000, desc: 'کارامل، آجیل، متعادل' , image: "img/colombia.webp", flagpic: "img/co.webp"},
+  { id: 'bra', name: 'برزیل', origin: 'برزیلی', flag: '🇧🇷', pricePerKg: 1100000, desc: 'شکلاتی، کره‌ای، ملایم' , image: "img/brazil.webp", flagpic: "img/br.webp"},
 ];
 
 export const robustaVariants = [
-  { id: 'viet', name: 'ویتنام', origin: 'ویتنامی', flag: '🇻🇳', pricePerKg: 560, desc: 'قوی، تلخ، کرما بالا' , image: "img/vietnam.webp", flagpic: "img/vn.webp"},
-  { id: 'ind',  name: 'هند',    origin: 'هندی',    flag: '🇮🇳', pricePerKg: 520, desc: 'خاکی، ادویه‌ای' , image: "img/india.webp", flagpic: "img/in.webp"},
-  { id: 'uga',  name: 'اوگاندا', origin: 'اوگاندایی', flag: '🇺🇬', pricePerKg: 490, desc: 'دودی، تند، غنی' , image: "img/uganda.webp", flagpic: "img/ug.webp"},
+  { id: 'viet', name: 'ویتنام', origin: 'ویتنامی', flag: '🇻🇳', pricePerKg: 650000, desc: 'قوی، تلخ، کرما بالا' , image: "img/vietnam.webp", flagpic: "img/vn.webp"},
+  { id: 'ind',  name: 'هند',    origin: 'هندی',    flag: '🇮🇳', pricePerKg: 550000, desc: 'خاکی، ادویه‌ای' , image: "img/india.webp", flagpic: "img/in.webp"},
+  { id: 'uga',  name: 'اوگاندا', origin: 'اوگاندایی', flag: '🇺🇬', pricePerKg: 500000, desc: 'دودی، تند، غنی' , image: "img/uganda.webp", flagpic: "img/ug.webp"},
 ];
 
 export const blendRatios = [

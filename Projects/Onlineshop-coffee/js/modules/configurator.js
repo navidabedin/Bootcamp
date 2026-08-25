@@ -17,6 +17,7 @@ export function getPrice() {
     blendRatio: state.blend,
     weightKg: state.weight.value,
     quantity: state.quantity,
+    form: state.form,
   });
 }
 
