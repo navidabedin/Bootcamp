@@ -299,7 +299,10 @@ fieldset {
   letter-spacing: .05em;
   color: var(--color-accent);
 }
-.product-card__name { font-size: 1.05rem; font-weight: 700; }
+.product-card__name {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
 
 .product-card__origin {
   font-size: .85rem;
@@ -308,7 +311,11 @@ fieldset {
 .product-card__origin img {
   max-width: 10px;
 }
-.product-card__desc { font-size: .85rem; color: var(--color-text-muted); flex: 1; }
+.product-card__desc {
+  font-size: .85rem;
+  color: var(--color-text-muted);
+  flex: 1;
+}
 .product-card__price {
   font-size: 1rem;
   font-weight: 700;
@@ -388,14 +395,25 @@ fieldset {
   transition: all var(--transition);
   text-align: center;
 }
-.variant-card:hover { border-color: var(--color-accent); }
+.variant-card:hover {
+  border-color: var(--color-accent);
+}
 .variant-card--selected {
   border-color: var(--color-selected);
   background: rgba(107,63,31,.06);
 }
-.variant-card__flag { font-size: 1.6rem; }
-.variant-card__name { font-size: .85rem; font-weight: 700; margin-top: .3rem; }
-.variant-card__price { font-size: .78rem; color: var(--color-text-muted); }
+.variant-card__flag {
+  font-size: 1.6rem; 
+}
+.variant-card__name { 
+  font-size: .85rem; 
+  font-weight: 700; 
+  margin-top: .3rem; 
+}
+.variant-card__price { 
+  font-size: .78rem; 
+  color: var(--color-text-muted); 
+}
 
 /* Blend Ratios */
 .blend-ratios {
@@ -591,7 +609,7 @@ fieldset {
   color: #c0392b;
   font-size: .8rem;
   margin-top: .2rem;
-}۳
+}
 .cart-empty {
   text-align: center;
   color: var(--color-text-muted);
