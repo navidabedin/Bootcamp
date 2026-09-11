@@ -1,0 +1,80 @@
+ *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+
+    :root {
+      --bg:        oklch(97% 0.005 250);
+      --surface:   oklch(100% 0 0);
+      --border:    oklch(88% 0.01 250);
+      --text:      oklch(18% 0.01 250);
+      --muted:     oklch(55% 0.01 250);
+      --accent:    oklch(52% 0.18 145);
+      --accent-bg: oklch(95% 0.05 145);
+      --radius-sm: 6px;
+      --radius-md: 12px;
+    }
+
+    body {
+      font-family: system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    #status {
+      color: var(--muted);
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    li {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 0.75rem 1rem;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .badge {
+      background: var(--accent-bg);
+      color: var(--accent);
+      border-radius: var(--radius-sm);
+      padding: 2px 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .error {
+      color: oklch(50% 0.2 25);
+      background: oklch(97% 0.05 25);
+      border: 1px solid oklch(85% 0.1 25);
+      border-radius: var(--radius-md);
+      padding: 1rem;
+    }
