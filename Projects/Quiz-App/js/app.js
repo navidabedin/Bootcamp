@@ -173,8 +173,7 @@ function handleAnswer(btn, opt) {
     });
   }
 
-  recordAnswer(opt.text);
-  state.currentIndex += 1;      
+  recordAnswer(opt.text);    
   state.timerRemaining = TIMER_SECONDS;
   persistState();
 
