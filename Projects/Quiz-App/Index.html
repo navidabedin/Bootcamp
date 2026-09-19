@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- START PAGE -->
+  <section id="start-page" class="page active">
+    <div class="card">
+      <h1 class="app-title">Quiz App</h1>
+      <p class="subtitle">Test your knowledge</p>
+
+      <form id="quiz-settings" novalidate>
+
+        <div class="field">
+          <label for="amount">Number of Questions</label>
+          <input
+            type="number"
+            id="amount"
+            name="amount"
+            min="1"
+            max="50"
+            value="10"
+            required
+          />
+          <span class="field-error" id="amount-error" role="alert"></span>
+        </div>
+
+        <div class="field">
+          <label for="difficulty">Difficulty</label>
+          <select id="difficulty" name="difficulty">
+            <option value="any">Any</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="category">Category <span class="optional">(optional)</span></label>
+          <select id="category" name="category">
+            <option value="any">Any Category</option>
+            <!-- JS -->
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="start-btn">
+          Start Quiz
+        </button>
+
+        <p id="api-error" class="api-error hidden" role="alert"></p>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- QUIZ PAGE (placeholder) -->
+  <section id="quiz-page" class="page">
+    <div class="card">
+      <div class="quiz-meta">
+        <span id="progress-label">Question <span id="current-q">1</span> of <span id="total-q">10</span></span>
+        <span id="score-label">Score: <span id="current-score">0</span></span>
+        <span id="timer-label">⏱ <span id="timer-count">15</span>s</span>
+      </div>
+      <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="10">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      <p id="question-text" class="question-text"></p>
+      <div id="options-grid" class="options-grid"></div>
+    </div>
+  </section>
+
+  <!-- RESULT PAGE (placeholder) -->
+  <section id="result-page" class="page">
+    <div class="card">
+      <h2>Quiz Complete!</h2>
+      <p class="final-score">Score: <span id="final-score-value">0</span> / <span id="final-total">10</span></p>
+      <ul id="answers-list" class="answers-list"></ul>
+      <button class="btn btn-primary" id="restart-btn">Start Over</button>
+    </div>
+  </section>
+
+  <!-- LOADING OVERLAY -->
+  <div id="loading-overlay" class="loading-overlay hidden" aria-live="polite" aria-label="Loading questions">
+    <div class="spinner"></div>
+    <p>Loading questions…</p>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
