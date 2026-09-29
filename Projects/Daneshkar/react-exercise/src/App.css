@@ -1,0 +1,103 @@
+.app h1 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.section {
+  background: #ffffff;
+  border: 1px solid #e4ddd4;
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.section h2 {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  color: #6b4f3a;
+  border-bottom: 1px dashed #d8cfc4;
+  padding-bottom: 0.5rem;
+}
+
+
+
+/*سوال اول*/
+
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.product-card {
+  flex: 1 1 220px;
+  background: #faf7f2;
+  border: 1px solid #e4ddd4;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.product-card h3 {
+  margin: 0 0 0.5rem;
+}
+
+.product-price {
+  margin: 0 0 0.5rem;
+  color: #a05a2c;
+  font-weight: bold;
+}
+
+.product-description {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #6f665d;
+}
+
+
+/*سوال دوم*/
+
+
+.input-console {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.input-console input {
+  flex: 1;
+  min-width: 220px;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #cfc5b9;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.input-console button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background: #6b4f3a;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.input-console button:hover {
+  background: #57402f;
+}
+
+
+/*سوال سوم*/
+
+
+.users-section h3 {
+  margin: 1rem 0 0.5rem;
+}
+
+.users-section p {
+  margin: 0.15rem 0;
+  color: #6f665d;
+}

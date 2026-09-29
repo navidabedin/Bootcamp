@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Tahoma, 'Segoe UI', sans-serif;
+  background-color: #f7f4ef;
+  color: #2f2a26;
+  line-height: 1.7;
+}
+
+#root {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
