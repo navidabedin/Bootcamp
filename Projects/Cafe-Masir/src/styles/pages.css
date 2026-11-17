@@ -1,0 +1,527 @@
+/* ── صفحات درباره ما، تماس، قوانین ── */
+
+.page-head {
+  padding-block: var(--sp-7) var(--sp-5);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: var(--sp-6);
+}
+
+.page-head__eyebrow {
+  display: inline-block;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--brand-ink);
+  background: var(--brand-soft);
+  padding: 5px 13px;
+  border-radius: var(--r-full);
+  margin-bottom: var(--sp-3);
+}
+
+.page-head__title {
+  font-size: clamp(28px, 4.4vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--sp-3);
+}
+
+.page-head__text {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 60ch;
+}
+
+.prose {
+  max-width: 68ch;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  font-size: 15.5px;
+  line-height: 2;
+  color: var(--ink-2);
+}
+
+/* ═════════ درباره ما ═════════ */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: var(--sp-7);
+  align-items: start;
+}
+
+.about-art {
+  position: relative;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background: var(--bg-2);
+  box-shadow: var(--shadow-2);
+}
+
+.about-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-art__caption {
+  position: absolute;
+  inset-inline: 14px;
+  bottom: 14px;
+  padding: 10px 14px;
+  border-radius: var(--r-md);
+  background: rgba(255, 253, 249, 0.92);
+  backdrop-filter: blur(8px);
+  font-size: 12.5px;
+  color: var(--ink-2);
+  line-height: 1.6;
+}
+
+.values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--sp-4);
+  margin-top: var(--sp-7);
+}
+
+.value-card {
+  padding: var(--sp-5);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.value-card__emoji {
+  font-size: 26px;
+  margin-bottom: var(--sp-3);
+  display: block;
+}
+
+.value-card__title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.value-card__text {
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.85;
+}
+
+/* ═════════ تماس با ما ═════════ */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-6);
+  align-items: start;
+}
+
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.contact-card {
+  display: flex;
+  gap: var(--sp-3);
+  padding: var(--sp-4);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  transition: border-color var(--dur) var(--ease);
+}
+
+.contact-card:hover {
+  border-color: #dcc9b4;
+}
+
+.contact-card__icon {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--r-md);
+  background: var(--brand-soft);
+  color: var(--brand-ink);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.contact-card__label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+
+.contact-card__value {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.contact-card__value a:hover {
+  color: var(--brand);
+}
+
+.hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.hours-list__row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding-block: 4px;
+  border-bottom: 1px dashed var(--line);
+}
+
+.hours-list__row:last-child {
+  border-bottom: 0;
+}
+
+/* فرم */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  padding: var(--sp-5);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.form__title {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.form__hint {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: var(--sp-2);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field__label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-2);
+}
+
+.field__input,
+.field__textarea {
+  width: 100%;
+  border-radius: var(--r-md);
+  border: 1px solid var(--line);
+  background: var(--bg);
+  padding: 11px 13px;
+  font-size: 14px;
+  transition: border-color var(--dur) var(--ease),
+    background var(--dur) var(--ease);
+}
+
+.field__textarea {
+  min-height: 110px;
+  resize: vertical;
+  line-height: 1.8;
+}
+
+.field__input:focus,
+.field__textarea:focus {
+  outline: none;
+  border-color: var(--brand);
+  background: var(--surface);
+}
+
+.field__input::placeholder,
+.field__textarea::placeholder {
+  color: #b3a292;
+}
+
+.form__success {
+  font-size: 13.5px;
+  color: var(--green);
+  background: rgba(74, 107, 82, 0.1);
+  padding: 10px 14px;
+  border-radius: var(--r-md);
+  animation: rise 240ms var(--ease);
+}
+
+/* ═════════ قوانین ═════════ */
+.terms {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: var(--sp-7);
+  align-items: start;
+}
+
+.terms__toc {
+  position: sticky;
+  top: calc(var(--header-h) + 24px);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 13.5px;
+}
+
+.terms__toc a {
+  padding: 8px 12px;
+  border-radius: var(--r-sm);
+  color: var(--muted);
+  border-inline-start: 2px solid transparent;
+  transition: all var(--dur) var(--ease);
+}
+
+.terms__toc a:hover {
+  color: var(--ink);
+  background: var(--bg-2);
+}
+
+.terms__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-6);
+  max-width: 68ch;
+}
+
+.terms__section {
+  scroll-margin-top: calc(var(--header-h) + 24px);
+}
+
+.terms__section-title {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: var(--sp-3);
+}
+
+.terms__section p {
+  font-size: 15px;
+  line-height: 2;
+  color: var(--ink-2);
+  margin-bottom: var(--sp-3);
+}
+
+.terms__note {
+  margin-top: var(--sp-5);
+  padding: var(--sp-4);
+  border-radius: var(--r-md);
+  background: var(--brand-soft);
+  font-size: 13.5px;
+  color: var(--brand-ink);
+  line-height: 1.9;
+}
+
+/* ═════════ ۴۰۴ ═════════ */
+.notfound {
+  text-align: center;
+  padding-block: var(--sp-9);
+}
+
+.notfound__code {
+  font-family: var(--font-display);
+  font-size: clamp(64px, 14vw, 120px);
+  font-weight: 700;
+  color: var(--brand-soft);
+  line-height: 1;
+}
+
+.notfound__title {
+  font-size: 22px;
+  font-weight: 800;
+  margin-block: var(--sp-3);
+}
+
+.notfound__text {
+  color: var(--muted);
+  margin-bottom: var(--sp-5);
+}
+
+/* ═════════ واکنش‌گرا ═════════ */
+@media (max-width: 900px) {
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-5);
+  }
+  .about-art {
+    aspect-ratio: 16 / 10;
+    max-height: 320px;
+  }
+  .terms {
+    grid-template-columns: 1fr;
+    gap: var(--sp-5);
+  }
+  .terms__toc {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .terms__toc a {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r-full);
+    font-size: 12.5px;
+    padding: 6px 12px;
+  }
+}
+
+/* ═════════ موبایل کوچک (≤۴۴۰px) ═════════ */
+@media (max-width: 500px) {
+  /* ── سرصفحه‌ی صفحات: وسط‌چین ── */
+  .page-head {
+    padding-block: var(--sp-5) var(--sp-4);
+    margin-bottom: var(--sp-5);
+    text-align: center;
+  }
+
+  .page-head__eyebrow {
+    font-size: 11.5px;
+    padding: 4px 11px;
+  }
+
+  .page-head__title {
+    font-size: clamp(24px, 7.5vw, 30px);
+    line-height: 1.3;
+  }
+
+  .page-head__text {
+    font-size: 14px;
+    margin-inline: auto;
+    max-width: 34ch;
+  }
+
+  .prose {
+    font-size: 14.5px;
+    line-height: 1.95;
+    gap: var(--sp-3);
+  }
+
+  /* ── درباره ما ── */
+  .about-art {
+    aspect-ratio: 16 / 11;
+    max-height: 260px;
+    margin: auto;
+  }
+
+  .values {
+    grid-template-columns: 1fr;
+    gap: var(--sp-3);
+    margin-top: var(--sp-5);
+  }
+
+  .value-card {
+    padding: var(--sp-4);
+    text-align: center;
+  }
+
+  .value-card__emoji {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .value-card__title {
+    font-size: 15px;
+  }
+
+  .value-card__text {
+    font-size: 13px;
+  }
+
+  /* ── تماس با ما ── */
+  .contact-cards {
+    gap: 10px;
+  }
+
+  .contact-card {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .contact-card__icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .contact-card__value {
+    font-size: 14px;
+  }
+
+  .hours-list {
+    font-size: 13px;
+  }
+
+  /* ── فرم ── */
+  .form {
+    padding: var(--sp-4);
+    gap: 10px;
+  }
+
+  .form__title {
+    font-size: 16px;
+  }
+
+  .field__input,
+  .field__textarea {
+    font-size: 13.5px;
+    padding: 10px 12px;
+  }
+
+  .field__textarea {
+    min-height: 96px;
+  }
+
+  /* ── قوانین ── */
+  .terms__toc {
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .terms__toc a {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .terms__body {
+    gap: var(--sp-5);
+  }
+
+  .terms__section-title {
+    font-size: 16px;
+  }
+
+  .terms__section p {
+    font-size: 14px;
+    line-height: 1.95;
+  }
+
+  .terms__note {
+    padding: var(--sp-3);
+    font-size: 12.5px;
+  }
+
+  /* ── ۴۰۴ ── */
+  .notfound {
+    padding-block: var(--sp-7);
+  }
+
+  .notfound__title {
+    font-size: 19px;
+  }
+
+  .notfound__text {
+    font-size: 14px;
+  }
+}
+

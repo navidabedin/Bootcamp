@@ -1,0 +1,77 @@
+/* ── متغیرهای طراحی: تنها منبع رنگ و اندازه ── */
+:root {
+  /* رنگ */
+  --bg: #f7f1e8;
+  --bg-2: #efe5d8;
+  --surface: #fffdf9;
+  --ink: #221a14;
+  --ink-2: #4a3a2e;
+  --muted: #8a7666;
+  --line: #e6d9c8;
+  --brand: #a4552b;
+  --brand-ink: #7d3d1d;
+  --brand-soft: #f3e2d3;
+  --gold: #c99a45;
+  --green: rgb(73, 105, 81);
+  --danger: #a33a2a;
+
+  /* شعاع */
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 18px;
+  --r-xl: 26px;
+  --r-full: 999px;
+
+  /* سایه */
+  --shadow-1: 0 1px 2px rgba(34, 26, 20, 0.05);
+  --shadow-2: 0 6px 18px -8px rgba(34, 26, 20, 0.18);
+  --shadow-3: 0 24px 80px -30px rgba(34, 26, 20, 0.35);
+
+  /* فاصله */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 72px;
+  --sp-9: 104px;
+
+  /* چیدمان */
+  --container: 1180px;
+  --header-h: 72px;
+  --gutter: 20px;
+
+  /* تایپوگرافی */
+  --font-body: 'Vazirmatn', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Playfair Display', 'Vazirmatn', serif;
+
+  /* حرکت */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur: 260ms;
+}
+
+
+
+@media (max-width: 720px) {
+  :root {
+    --header-h: 64px;
+    --gutter: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  :root {
+    /* هدر دو ردیفه می‌شود: لوگو بالا + دکمه‌ها پایین */
+    --header-h: 102px;
+    --gutter: 14px;
+
+    /* فشرده‌سازی فاصله‌های بزرگ تا صفحه کوتاه‌تر شود */
+    --sp-7: 36px;
+    --sp-8: 48px;
+    --sp-9: 64px;
+
+    --r-xl: 20px;
+  }
+}

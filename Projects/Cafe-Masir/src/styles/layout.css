@@ -1,0 +1,433 @@
+/* ── قالب کلی: هدر، فوتر، بدنه ── */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app__main {
+  flex: 1;
+}
+
+/* ═════════ هدر ═════════ */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(247, 241, 232, 0.82);
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease);
+}
+
+.header--scrolled {
+  border-bottom-color: var(--line);
+  box-shadow: var(--shadow-1);
+}
+
+.header__inner {
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+}
+
+/* لوگو */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.brand__mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: var(--ink);
+  color: var(--bg);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.brand__mark img {
+  border-radius: 25%;
+}
+
+.brand__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.brand__name {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.brand__latin {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: var(--muted);
+}
+
+/* ناوبری */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+  margin-inline: auto;
+}
+
+.nav__link {
+  position: relative;
+  padding: 8px 14px;
+  border-radius: var(--r-full);
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--ink-2);
+  transition: color var(--dur) var(--ease), background var(--dur) var(--ease);
+}
+
+.nav__link:hover {
+  color: var(--ink);
+  background: var(--bg-2);
+}
+
+.nav__link--active {
+  color: var(--brand-ink);
+  background: var(--brand-soft);
+  font-weight: 700;
+}
+
+/* دکمه‌ی ثبت سفارش (سمت چپ هدر) */
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  flex-shrink: 0;
+}
+
+.order-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 42px;
+  padding-inline: 18px;
+  border-radius: var(--r-full);
+  background: var(--ink);
+  color: var(--bg);
+  font-size: 14.5px;
+  font-weight: 700;
+  transition: transform var(--dur) var(--ease),
+    background var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+
+.order-btn:hover {
+  background: var(--brand-ink);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-2);
+}
+
+.order-btn:active {
+  transform: translateY(0);
+}
+
+.order-btn__badge {
+  min-width: 21px;
+  height: 21px;
+  padding-inline: 6px;
+  border-radius: var(--r-full);
+  background: var(--gold);
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+  line-height: 1;
+}
+
+/* دکمه منوی موبایل */
+.burger {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  place-items: center;
+  color: var(--ink);
+}
+
+/* شیت موبایل */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.mobile-menu__scrim {
+  position: absolute;
+  inset: 0;
+  background: rgba(34, 26, 20, 0.42);
+  backdrop-filter: blur(2px);
+  animation: fade-in 200ms var(--ease);
+}
+
+.mobile-menu__panel {
+  position: relative;
+  width: min(320px, 86vw);
+  height: 100%;
+  background: var(--surface);
+  padding: var(--sp-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-5);
+  animation: slide-from-left 240ms var(--ease);
+  box-shadow: var(--shadow-3);
+}
+
+.mobile-menu__links {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mobile-menu__links a {
+  padding: 14px 12px;
+  border-radius: var(--r-md);
+  font-weight: 600;
+  color: var(--ink-2);
+}
+
+.mobile-menu__links a:hover,
+.mobile-menu__links a.active {
+  background: var(--brand-soft);
+  color: var(--brand-ink);
+}
+
+.mobile-menu__foot {
+  margin-top: auto;
+  font-size: 13px;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-top: 1px solid var(--line);
+  padding-top: var(--sp-4);
+}
+
+/* ═════════ فوتر ═════════ */
+.footer {
+  margin-top: var(--sp-9);
+  background: var(--ink);
+  color: #e8ddd0;
+  padding-block: var(--sp-7) var(--sp-5);
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: var(--sp-6);
+}
+
+.footer__brand .brand__mark {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.footer__brand .brand__name {
+  color: #fff;
+}
+
+.footer__brand .brand__latin {
+  color: #a99a8b;
+}
+
+.footer__about {
+  margin-top: var(--sp-4);
+  font-size: 14px;
+  color: #b7a898;
+  max-width: 34ch;
+  line-height: 1.9;
+}
+
+.footer__title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #fff;
+  margin-bottom: var(--sp-4);
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+  color: #b7a898;
+}
+
+.footer__list a:hover {
+  color: #fff;
+}
+
+.footer__bottom {
+  margin-top: var(--sp-6);
+  padding-top: var(--sp-4);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  font-size: 12.5px;
+  color: #8e8073;
+  flex-wrap: wrap;
+}
+
+/* ── انیمیشن‌های مشترک ── */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-from-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ═════════ واکنش‌گرا ═════════ */
+
+
+/* @media (max-width: 500px) {
+  .brand__latin {
+    display: none;
+  }
+  .order-btn {
+    padding-inline: 14px;
+    height: 40px;
+    font-size: 13.5px;
+  }
+  .order-btn__label {
+    display: none;
+  }
+  .footer__grid {
+    grid-template-columns: 1fr;
+  }
+}
+ */
+/* ═════════ موبایل کوچک (≤۴۴۰px) ═════════ */
+@media (max-width: 500px) {
+  /* ── هدر: دو ردیف، وسط‌چین ── */
+  .header__inner {
+    height: auto;
+    min-height: var(--header-h);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding-block: 10px;
+  }
+
+  .brand {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .brand__mark {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+  }
+
+  .brand__name {
+    font-size: 16px;
+  }
+
+  /* ردیف پایین: دکمه سفارش وسط + برگر کنارش */
+  .header__actions {
+    width: 100%;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .order-btn {
+    flex: 1;
+    max-width: 200px;
+    justify-content: center;
+    height: 40px;
+    padding-inline: 12px;
+    font-size: 13.5px;
+  }
+
+  /* برچسب «ثبت سفارش» را در این عرض دوباره نشان می‌دهیم */
+  .order-btn__label {
+    display: inline;
+  }
+
+  .burger {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* ── فوتر: همه چیز وسط‌چین ── */
+  /* .footer {
+    margin-top: var(--sp-7);
+    padding-block: var(--sp-6) var(--sp-4);
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-5);
+    text-align: center;
+  }
+
+  .footer__brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__about {
+    margin-inline: auto;
+    max-width: 32ch;
+  }
+
+  .footer__list {
+    align-items: center;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+  } */
+}
+
