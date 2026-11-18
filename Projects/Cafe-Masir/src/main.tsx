@@ -4,6 +4,17 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import { CartProvider } from './context/CartContext';
 
+   import '@fontsource/vazirmatn/300.css';
+   import '@fontsource/vazirmatn/400.css';
+   import '@fontsource/vazirmatn/500.css';
+   import '@fontsource/vazirmatn/600.css';
+   import '@fontsource/vazirmatn/700.css';
+   import '@fontsource/vazirmatn/800.css';
+   import '@fontsource/playfair-display/500.css';
+   import '@fontsource/playfair-display/600.css';
+   import '@fontsource/playfair-display/500-italic.css';
+
+
 /* ترتیب مهم است: توکن‌ها، پایه، سپس هر بخش */
 import './styles/tokens.css';
 import './styles/base.css';
