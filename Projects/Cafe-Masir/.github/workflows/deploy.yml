@@ -17,31 +17,18 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
-
-      - name: Debug info
-        run: |
-          echo "=== ROOT ==="
-          ls -la
-          echo "=== package.json location ==="
-          find . -maxdepth 3 -name package.json -not -path "*/node_modules/*"
-
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-
       - name: Install
-        run: npm ci || npm install
-
+        run: npm ci --no-audit --no-fund || npm install --no-audit --no-fund
       - name: Build
         run: npm run build
-
-      - name: Copy 404 for SPA routes
+      - name: SPA fallback
         run: cp dist/index.html dist/404.html
-
-      - uses: actions/configure-pages@v5
-
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
