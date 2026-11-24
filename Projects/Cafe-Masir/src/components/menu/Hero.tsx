@@ -58,7 +58,7 @@ export function Hero() {
         <div className="hero__art">
           <div className="hero__art-main">
             <ItemImage
-              src="../src/pics/palfredo.webp"
+              src="../pics/palfredo.webp"
               alt="پاستا آلفردو نمای نزدیک"
               emoji=""
               loading="eager"
@@ -66,7 +66,7 @@ export function Hero() {
           </div>
           <div className="hero__art-small">
             <ItemImage
-              src="../src/pics/OIP.webp"
+              src="../pics/OIP.webp"
               alt="فنجان لاته با لاته‌آرت روی میز چوبی"
               emoji="☕"
               loading="eager"
@@ -74,7 +74,7 @@ export function Hero() {
           </div>
           <div className="hero__stamp" aria-hidden="true">
             <ItemImage
-              src="../src/pics/cake.webp"
+              src="../pics/cake.webp"
               alt="کیک تازه"
               emoji=""
               loading="eager"

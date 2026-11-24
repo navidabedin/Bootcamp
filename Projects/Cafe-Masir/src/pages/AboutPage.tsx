@@ -19,7 +19,7 @@ export function AboutPage() {
 
         <div className="about-art">
           <ItemImage
-            src="../src/pics/masiir.webp"
+            src="../pics/masiir.webp"
             alt="فضای داخلی کافه با میزهای چوبی"
             emoji="🪑"
           />

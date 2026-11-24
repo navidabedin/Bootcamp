@@ -1,18 +1,18 @@
-import type { Category, MenuItem } from '../types';
+/* import type { Category, MenuItem } from '../types'; */
 
 /* ────────────────────────────────────────────────────────────
    تصاویر محلی
    همه‌ی فایل‌های src/pics یک‌جا خوانده می‌شوند؛ نیازی به import تک‌تک نیست.
    اسم فایل را بده (با یا بدون پسوند):  pic('palfredo')
    ──────────────────────────────────────────────────────────── */
-const picFiles = import.meta.glob('../pics/*.{webp,jpg,jpeg,png,avif,gif}', {
+/* const picFiles = import.meta.glob('../pics/*.{webp,jpg,jpeg,png,avif,gif}', {
   eager: true,
   query: '?url',
   import: 'default',
 }) as Record<string, string>;
-
+ */
 /** «اسم فایل بدون پسوند» → «آدرس نهایی تصویر» */
-const pics: Record<string, string> = Object.fromEntries(
+/* const pics: Record<string, string> = Object.fromEntries(
   Object.entries(picFiles).map(([path, url]) => [
     path.split('/').pop()!.replace(/\.[^.]+$/, ''),
     url,
@@ -27,6 +27,18 @@ const pic = (name: string): string => {
   }
   return url ?? '';
 };
+ */
+
+
+import type { Category, MenuItem } from '../types';
+
+const pic = (name: string): string =>
+  `${import.meta.env.BASE_URL}pics/${name}.webp`;
+
+
+
+
+
 
 
 export const categories: Category[] = [

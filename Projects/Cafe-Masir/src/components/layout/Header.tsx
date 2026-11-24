@@ -45,7 +45,7 @@ export function Header() {
       <div className="container header__inner">
         <Link to="/" className="brand" aria-label={`${'کافه مسیر'} — صفحه‌ی اصلی`}>
           <span className="brand__mark">
-            <img src="../src/pics/logo.webp" alt="logo"/>
+            <img src="../pics/logo.webp" alt="logo"/>
           </span>
           <span className="brand__text">
             <span className="brand__name">کافه مسیر</span>

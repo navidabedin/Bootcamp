@@ -9,7 +9,7 @@ export function Footer() {
           <div className="footer__brand">
             <div className="brand">
               <span className="brand__mark">
-                <img src="../src/pics/logo.webp" alt="logo"/>
+                <img src="../pics/logo.webp" alt="logo"/>
               </span>
               <span className="brand__text">
                 <span className="brand__name">{site.name}</span>
