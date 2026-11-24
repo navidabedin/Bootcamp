@@ -20,6 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+<<<<<<< HEAD:Projects/Cafe-Masir/.github/workflows/deploy.yml
       - name: Debug info
         run: |
           echo "=== ROOT ==="
@@ -27,10 +28,18 @@ jobs:
           echo "=== package.json location ==="
           find . -maxdepth 3 -name package.json -not -path "*/node_modules/*"
 
+=======
+>>>>>>> 13b781364713845010cf84e4f559f86aac957dd3:Projects/Cafe-Masir/github/workflows/deploy.yml
       - uses: actions/setup-node@v4
         with:
           node-version: 20
 
+<<<<<<< HEAD:Projects/Cafe-Masir/.github/workflows/deploy.yml
+=======
+      - name: Show repo root
+        run: ls -la
+
+>>>>>>> 13b781364713845010cf84e4f559f86aac957dd3:Projects/Cafe-Masir/github/workflows/deploy.yml
       - name: Install
         run: npm ci || npm install
 
