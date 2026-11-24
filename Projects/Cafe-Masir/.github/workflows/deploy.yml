@@ -19,13 +19,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Debug info
+        run: |
+          echo "=== ROOT ==="
+          ls -la
+          echo "=== package.json location ==="
+          find . -maxdepth 3 -name package.json -not -path "*/node_modules/*"
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-      - run: npm ci
-      - run: npm run build
+
+      - name: Install
+        run: npm ci || npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Copy 404 for SPA routes
+        run: cp dist/index.html dist/404.html
+
       - uses: actions/configure-pages@v5
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
